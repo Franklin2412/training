@@ -2,6 +2,7 @@ package com.laminin.baseadapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,10 +39,11 @@ public class CardsAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        if(convertView == null){
+        Log.d("frank", "getView :" + position);
+//        if(convertView == null){
             LayoutInflater mInflater = (LayoutInflater) mContext.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
             convertView = mInflater.inflate(R.layout.card_list_row, null);
-        }
+//        }
 
         UserCard userCard = mUserCards.get(position);
 
